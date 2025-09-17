@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Terremoto</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Magnitude e Efeitos de Terremoto</h1>
+            <p>Insira os dados do sismógrafo para analisar o abalo sísmico.</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <label for="amplitude">Amplitude Máxima (A) em mm:</label>
+                <input type="number" id="amplitude" placeholder="Ex: 12" min="0">
+            </div>
+
+            <div class="input-group">
+                <label for="deltaT">Tempo (Δt) entre ondas P e S (segundos):</label>
+                <input type="number" id="deltaT" placeholder="Ex: 24" min="0">
+            </div>
+
+            <button id="calculateBtn">Calcular</button>
+
+            <div id="results" class="hidden">
+                <h2>Resultados da Análise</h2>
+                <div class="result-item">
+                    <strong>Magnitude (M):</strong>
+                    <span id="magnitudeValue"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Energia Liberada (E):</strong>
+                    <span id="energiaValue"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Efeitos Prováveis:</strong>
+                    <p id="efeitosValue"></p>
+                </div>
+            </div>
+            
+            <div id="error-message" class="hidden"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
